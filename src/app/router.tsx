@@ -5,6 +5,7 @@ import { Index } from 'pages';
 import { ErrorPage } from 'pages/error-page';
 import { Login } from 'pages/login';
 import { Register } from 'pages/register';
+import { Messenger } from 'pages/messemger';
 
 export const router = createBrowserRouter([
     {
@@ -22,8 +23,8 @@ export const router = createBrowserRouter([
             },
             {
                 path: constant.Routes.Messenger,
-                element: <p>Messanger</p>
-            }
+                element: <Messenger />,
+            },
         ],
     },
 ]);
