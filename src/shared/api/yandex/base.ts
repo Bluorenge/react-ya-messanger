@@ -78,7 +78,7 @@ class FetchInstance {
 
         const response = await fetch(`${this.baseUrl}${path}`, {
             method,
-            headers,
+            headers: isFormData ? undefined : headers, // иначе boundry не будет
             credentials: 'include',
             body: isFormData ? body : JSON.stringify(body),
         });

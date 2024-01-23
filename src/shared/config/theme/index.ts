@@ -11,8 +11,16 @@ const config: ThemeConfig = {
 const theme = extendTheme({
     config,
     colors: {
-        primary: {
-            main: PRIMARY_COLOR,
+        brand: {
+            400: PRIMARY_COLOR,
+        },
+        grayBg: {
+            light: '#fafafa',
+            dark: 'gray.800',
+        },
+        gray: {
+            300: '#fafafa',
+            400: '#efefef',
         },
     },
     components: {

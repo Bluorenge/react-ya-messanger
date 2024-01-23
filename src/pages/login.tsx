@@ -1,6 +1,6 @@
 import { AuthLayout } from 'shared/ui';
-import { ChangeTheme } from 'features/theme/ChangeTheme';
-import { LoginForm } from 'features/authentication/Login';
+import { ChangeTheme } from 'features/theme/changeTheme';
+import { LoginForm } from 'features/authentication/login';
 
 export const Login = () => {
     return (

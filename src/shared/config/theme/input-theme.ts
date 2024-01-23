@@ -1,5 +1,6 @@
 import { createMultiStyleConfigHelpers } from '@chakra-ui/react';
 import { inputAnatomy } from '@chakra-ui/anatomy';
+
 import { PRIMARY_COLOR } from './constant';
 
 const { definePartsStyle, defineMultiStyleConfig } =

@@ -14,7 +14,7 @@ const auth = {
     },
     logout: () => {
         return fetchInstance.post('/auth/logout');
-    },
+    }
 };
 
 export { auth };

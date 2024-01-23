@@ -1,0 +1,1 @@
+export { FormAvatar } from './ui';

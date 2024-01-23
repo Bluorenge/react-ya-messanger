@@ -9,7 +9,7 @@ import {
     InputRightElement,
     Button,
     useBoolean,
-    Text,
+    Text
 } from '@chakra-ui/react';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
@@ -17,7 +17,7 @@ import { useForm } from 'react-hook-form';
 
 import { FetchResponse, authModels, yaApi } from 'shared/api';
 import { constant } from 'shared/config';
-import { validationModel } from '../..';
+import { validation } from 'shared/model';
 
 export const RegisterForm = () => {
     const [showPass, setShowPass] = useBoolean();
@@ -59,7 +59,7 @@ export const RegisterForm = () => {
 
             <VStack
                 as="form"
-                onSubmit={handleSubmit(data => {
+                onSubmit={handleSubmit((data) => {
                     // eslint-disable-next-line @typescript-eslint/no-unused-vars
                     const { confirm_password, ...signUpData } = data;
                     onSubmit(signUpData);
@@ -72,10 +72,7 @@ export const RegisterForm = () => {
                 >
                     <Input
                         placeholder=" "
-                        {...register(
-                            'email',
-                            validationModel.emailValidationSetting
-                        )}
+                        {...register('email', validation.email)}
                     />
 
                     <FormLabel htmlFor="email">Email</FormLabel>
@@ -91,10 +88,7 @@ export const RegisterForm = () => {
                 >
                     <Input
                         placeholder=" "
-                        {...register(
-                            'first_name',
-                            validationModel.nameValidationSetting
-                        )}
+                        {...register('first_name', validation.name)}
                     />
 
                     <FormLabel htmlFor="first_name">First name</FormLabel>
@@ -111,10 +105,7 @@ export const RegisterForm = () => {
                 >
                     <Input
                         placeholder=" "
-                        {...register(
-                            'second_name',
-                            validationModel.nameValidationSetting
-                        )}
+                        {...register('second_name', validation.name)}
                     />
 
                     <FormLabel htmlFor="second_name">Second name</FormLabel>
@@ -131,10 +122,7 @@ export const RegisterForm = () => {
                 >
                     <Input
                         placeholder=" "
-                        {...register(
-                            'phone',
-                            validationModel.phoneValidationSetting
-                        )}
+                        {...register('phone', validation.phone)}
                     />
 
                     <FormLabel htmlFor="phone">Phone</FormLabel>
@@ -150,10 +138,7 @@ export const RegisterForm = () => {
                 >
                     <Input
                         placeholder=" "
-                        {...register(
-                            'login',
-                            validationModel.loginValidationSetting
-                        )}
+                        {...register('login', validation.login)}
                     />
 
                     <FormLabel htmlFor="login">Login</FormLabel>
@@ -172,10 +157,7 @@ export const RegisterForm = () => {
                             placeholder=" "
                             pr="4.5rem"
                             type={showPass ? 'text' : 'password'}
-                            {...register(
-                                'password',
-                                validationModel.passwordValidationSetting
-                            )}
+                            {...register('password', validation.password)}
                         />
 
                         <FormLabel htmlFor="password">Password</FormLabel>
@@ -207,7 +189,7 @@ export const RegisterForm = () => {
                             type={showPass ? 'text' : 'password'}
                             {...register(
                                 'confirm_password',
-                                validationModel.confirmPasswordValidationSetting(
+                                validation.confirmPassword(
                                     watch('password')
                                 )
                             )}

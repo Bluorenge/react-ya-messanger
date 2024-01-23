@@ -6,6 +6,7 @@ import { ErrorPage } from 'pages/error-page';
 import { Login } from 'pages/login';
 import { Register } from 'pages/register';
 import { Messenger } from 'pages/messemger';
+import { Account } from 'pages/account';
 
 export const router = createBrowserRouter([
     {
@@ -24,6 +25,18 @@ export const router = createBrowserRouter([
             {
                 path: constant.Routes.Messenger,
                 element: <Messenger />,
+            },
+            {
+                path: constant.Routes.Account,
+                element: <Account />,
+            },
+            {
+                path: constant.Routes.AccountInfoEdit,
+                element: <Account />,
+            },
+            {
+                path: constant.Routes.AccountPasswordEdit,
+                element: <Account />,
             },
         ],
     },

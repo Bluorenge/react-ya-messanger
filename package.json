@@ -13,6 +13,7 @@
     "@chakra-ui/react": "^2.6.1",
     "@emotion/react": "^11.11.0",
     "@emotion/styled": "^11.11.0",
+    "@reduxjs/toolkit": "^1.9.5",
     "compose-function": "^3.0.3",
     "eslint-config-prettier": "^8.8.0",
     "framer-motion": "^10.12.12",
@@ -20,10 +21,12 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-hook-form": "^7.43.9",
+    "react-redux": "^8.0.5",
     "react-router": "^6.11.1",
     "react-router-dom": "^6.11.1"
   },
   "devDependencies": {
+    "@emotion/babel-plugin": "^11.11.0",
     "@types/compose-function": "^0.0.30",
     "@types/node": "^20.1.7",
     "@types/react": "^18.2.6",
@@ -33,7 +36,8 @@
     "@typescript-eslint/eslint-plugin": "^5.59.6",
     "@typescript-eslint/parser": "^5.59.6",
     "@vitejs/plugin-react": "^4.0.0",
-    "eslint": "^8.40.0",
+    "eslint": "^8.7.0",
+    "eslint-plugin-react": "^7.32.2",
     "typescript": "^5.0.4",
     "vite": "^4.3.7",
     "vite-tsconfig-paths": "^4.2.0"

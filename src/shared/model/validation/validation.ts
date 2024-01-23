@@ -1,4 +1,4 @@
-export const nameValidationSetting = {
+export const name = {
     required: 'This is required',
     pattern: {
         value: /^[A-ZА-ЯЁ](.*)$/,
@@ -8,7 +8,7 @@ export const nameValidationSetting = {
         /^[A-ZА-ЯЁa-zа-яё-]+$/.test(val) || 'Only latin and hyphen.',
 };
 
-export const emailValidationSetting = {
+export const email = {
     required: 'This is required',
     pattern: {
         value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
@@ -16,7 +16,7 @@ export const emailValidationSetting = {
     },
 };
 
-export const loginValidationSetting = {
+export const login = {
     required: 'This is required',
     min: {
         value: 3,
@@ -35,7 +35,7 @@ export const loginValidationSetting = {
     },
 };
 
-export const phoneValidationSetting = {
+export const phone = {
     required: 'This is required',
     min: {
         value: 8,
@@ -52,7 +52,7 @@ export const phoneValidationSetting = {
     },
 };
 
-export const passwordValidationSetting = {
+export const password = {
     required: 'This is required',
     min: {
         value: 8,
@@ -71,7 +71,7 @@ export const passwordValidationSetting = {
     },
 };
 
-export const confirmPasswordValidationSetting = (watchVal: string) => ({
+export const confirmPassword = (watchVal: string) => ({
     validate: (val: string) => {
         if (watchVal !== val) {
             return 'Your passwords do no match';

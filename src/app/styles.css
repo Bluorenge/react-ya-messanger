@@ -1,0 +1,14 @@
+.field--file input {
+    display: none;
+}
+
+.field--file span {
+    max-width: 120px;
+    margin: auto;
+    color: #1955a6;
+    cursor: pointer;
+}
+
+.field--file:hover span {
+    text-decoration: underline;
+}

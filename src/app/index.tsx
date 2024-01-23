@@ -1,14 +1,19 @@
 import { RouterProvider } from 'react-router';
 import { router } from './router';
 import { ChakraProvider } from '@chakra-ui/react';
+import { Provider } from 'react-redux';
 
+import { store } from './store';
 import { theme } from 'shared/config';
-import './index.css';
+
+import './styles.css';
 
 function App() {
     return (
         <ChakraProvider theme={theme}>
-            <RouterProvider router={router} />
+            <Provider store={store}>
+                <RouterProvider router={router} />
+            </Provider>
         </ChakraProvider>
     );
 }
